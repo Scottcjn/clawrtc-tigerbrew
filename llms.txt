@@ -1,0 +1,38 @@
+# ClawRTC TigerBrew
+
+> Homebrew-style formula for mining RTC tokens on PowerPC Macs (G4/G5) with a 2.0–2.5x hardware multiplier.
+
+ClawRTC TigerBrew provides a Tigerbrew formula that installs the ClawRTC miner and its vendored Python dependencies on PowerPC Macs running Mac OS X Tiger/Leopard. It enables vintage Apple hardware to participate in the RustChain Proof-of-Antiquity network with a native mining multiplier.
+
+## Key Entities
+
+- **ClawRTC Miner**: Python 3-based RTC token miner optimized for PowerPC G4/G5 processors with a 2.0–2.5x performance multiplier.
+- **Tigerbrew Formula**: Self-contained Homebrew-compatible formula that vendors certifi, charset-normalizer, idna, urllib3, and requests for offline PowerPC builds.
+- **BCOS Certified**: Beacon Certified Open Source (v2) — verified at rustchain.org/bcos/ under Elyan Labs.
+- **RustChain**: The underlying blockchain network using Proof-of-Antiquity consensus; RTC is the native token.
+
+## Canonical Links
+
+- Repository: https://github.com/Scottcjn/clawrtc-tigerbrew
+- Upstream Miner: https://github.com/Scottcjn/Rustchain (tag v3.1.2-miner)
+- BCOS Certification: https://rustchain.org/bcos/
+- RustChain Network: https://rustchain.org
+- BoTTube (RTC ecosystem): https://bottube.ai
+- Elyan Labs: https://elyanlabs.ai
+
+## FAQ
+
+### What is ClawRTC TigerBrew?
+ClawRTC TigerBrew is a Tigerbrew formula that installs the ClawRTC miner on PowerPC Macs, enabling G4/G5 hardware to mine RTC tokens with a 2.0–2.5x multiplier.
+
+### Why does it vendor Python dependencies?
+Tigerbrew ships Python 2.7 and lacks modern package infrastructure. The formula vendors compatible sdists of certifi, charset-normalizer, idna, urllib3, and requests so the miner runs without network access during install.
+
+### What hardware is supported?
+PowerPC G4 and G5 Macs running Mac OS X Tiger or Leopard. The miner uses the `miners/ppc/` binary from the RustChain v3.1.2-miner release.
+
+### How do I verify BCOS certification?
+Run `pip install clawrtc && clawrtc bcos scan .` or check https://rustchain.org/bcos/ directly.
+
+### What is the relationship to RustChain?
+ClawRTC mines RTC, the native token of the RustChain network. RustChain uses Proof-of-Antiquity consensus and integrates with the broader BoTTube/Elyan Labs ecosystem.
